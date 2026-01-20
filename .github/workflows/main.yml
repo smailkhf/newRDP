@@ -47,7 +47,7 @@ jobs:
           $password = -join ($rawPassword | Sort-Object { Get-Random })
           $password = "hohoHOHO2013"
           $securePass = ConvertTo-SecureString $password -AsPlainText -Force
-          Set-LocalUser -Name "RDP" -Password $securePass
+          
 
           Add-LocalGroupMember -Group "Administrators" -Member "RDP"
           Add-LocalGroupMember -Group "Remote Desktop Users" -Member "RDP"
